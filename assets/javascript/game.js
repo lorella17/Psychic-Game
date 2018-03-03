@@ -37,12 +37,16 @@ if (userName){
                 computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
                 document.getElementById("Wins").innerText = wins;
                 document.getElementById("Guesses").innerText= GuessesLeft;
-                document.getElementById("YourGuessesSoFar").innerText = lettersGuessed;
+                location.reload();
+
             }
             else {
                 GuessesLeft --;
                 document.getElementById("Guesses").innerText= GuessesLeft;
-
+                lettersGuessed.push(userGuess);
+                document.getElementById("YourGuessesSoFar").innerText = lettersGuessed;
+                console.log(lettersGuessed);
+                location.reload();
             }
 
                if(GuessesLeft == 0){
@@ -52,6 +56,7 @@ if (userName){
                    document.getElementById("losses").innerText = losses;
                    document.getElementById("Guesses").innerText= GuessesLeft;
                    document.getElementById("YourGuessesSoFar").innerText = lettersGuessed;
+                   location.reload();
 
                }
 
