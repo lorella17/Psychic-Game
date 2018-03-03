@@ -37,7 +37,7 @@ if (userName){
                 computerGuess = computerChoices[Math.floor(Math.random() * computerChoices.length)];
                 document.getElementById("Wins").innerText = wins;
                 document.getElementById("Guesses").innerText= GuessesLeft;
-                
+                document.getElementById("YourGuessesSoFar").innerText = "";
 
             }
             else {
